@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+	<head>
+		<title>http.requestid - Caddy User Guide</title>
+		{{.Include "/includes/head.html"}}
+		<link rel="stylesheet" href="/resources/css/docs.css">
+	</head>
+	<body>
+		{{.Include "/includes/docs-nav.html"}}
+
+		<div class="content-container">
+			{{.Include "/includes/docs-nav-side.html"}}
+			
+			<article>
+				<h2>http.requestid</h2>
+				
+				<p>
+					requestid when invoked generates a UUID which can be referenced via the `{request_id}` <a href="placeholders">placeholder</a> , for use in many other directives including `header` and `log`</p>
+
+				<p>When requestid directive is present `{request_id}` will have a value otherwise it will be empty</p>	
+
+				<h3 id="syntax">Syntax</h3>
+
+				
+
+				<p>requestid simply has to be included on a line on its own for the requestid to be generated.</p>
+
+				<p><code class="block"><span class="cf-dir">requestid</span> </code></p>
+
+				<h3 id="examples">Examples</h3>
+
+				<p>Send a requestid header </p>
+
+				<p><code class="block"><span class="cf-dir">requestid</span> 
+					<Br><span class="cf-arg">  header /  "X-Request-Id" {request_id}</span>
+				</code></p>
+
+				
+
+
+
+				{{.Include "/includes/docs-helpbox.html"}}
+			</article>
+		</div>
+		{{.Include "/includes/footer.html"}}
+	</body>
+</head>
