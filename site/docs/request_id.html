@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <head>
 	<head>
-		<title>http.requestid - Caddy User Guide</title>
+		<title>http.request_id - Caddy User Guide</title>
 		{{.Include "/includes/head.html"}}
 		<link rel="stylesheet" href="/resources/css/docs.css">
 	</head>
@@ -12,12 +12,12 @@
 			{{.Include "/includes/docs-nav-side.html"}}
 			
 			<article>
-				<h2>http.requestid</h2>
+				<h2>http.request_id</h2>
 				
 				<p>
-					requestid when invoked generates a UUID which can be referenced via the `{request_id}` <a href="placeholders">placeholder</a> , for use in many other directives including <a href="header">`header`</a>  and <a href="log">`log`</a> </p>
+					request_id when invoked generates a UUID which can be referenced via the `{request_id}` <a href="placeholders">placeholder</a> , for use in many other directives including <a href="header">`header`</a>  and <a href="log">`log`</a> </p>
 
-				<p>When requestid directive is present `{request_id}` will have a value otherwise it will be empty</p>	
+				<p>When request_id directive is present `{request_id}` will have a value otherwise it will be empty</p>	
 
 				<h3 id="syntax">Syntax</h3>
 
@@ -25,13 +25,13 @@
 
 				<p>requestid simply has to be included on a line on its own for the requestid to be generated.</p>
 
-				<p><code class="block"><span class="cf-dir">requestid</span> </code></p>
+				<p><code class="block"><span class="cf-dir">request_id</span> </code></p>
 
 				<h3 id="examples">Examples</h3>
 
-				<p>Send a requestid header </p>
+				<p>Send a request_id header </p>
 
-				<p><code class="block"><span class="cf-dir">requestid</span> 
+				<p><code class="block"><span class="cf-dir">request_id</span> 
 					<Br><span class="cf-arg">  header /  "X-Request-Id" {request_id}</span>
 				</code></p>
 
