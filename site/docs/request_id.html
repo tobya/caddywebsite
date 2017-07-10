@@ -13,34 +13,25 @@
 			
 			<article>
 				<h2>http.request_id</h2>
-				
-				<p>
-					request_id when invoked generates a UUID which can be referenced via the `{request_id}` <a href="placeholders">placeholder</a> , for use in many other directives including <a href="header">`header`</a>  and <a href="log">`log`</a> </p>
+								
+				<p>request_id generates a UUID which can be referenced via the <code>{request_id}</code> <a href="placeholders">placeholder</a>, for use in many other directives including <a href="header"><code>header</code></a> and <a href="log"><code>log</code></a></p>
 
-				<p>When request_id directive is present `{request_id}` will have a value otherwise it will be empty</p>	
+				<p>When request_id is used, the <code>{request_id}</code> <a href="/docs/placeholders">placeholder</a> will have a value; otherwise it will be empty.</p>	
 
 				<h3 id="syntax">Syntax</h3>
 
-				
-
-				<p>requestid simply has to be included on a line on its own for the requestid to be generated.</p>
-
-				<p><code class="block"><span class="cf-dir">request_id</span> </code></p>
+				<p><code class="block"><span class="cf-dir">request_id</span></code></p>
 
 				<h3 id="examples">Examples</h3>
 
-				<p>Send a request_id header </p>
+				<p>Set the request ID in a response header</p>
 
-				<p><code class="block"><span class="cf-dir">request_id</span> 
-					<Br><span class="cf-arg">  header /  "X-Request-Id" {request_id}</span>
-				</code></p>
-
-				
-
-
+				<code class="block"><span class="cf-dir">request_id</span> 
+				<span class="cf-arg">  header /  X-Request-Id {request_id}</span></code>
 
 				{{.Include "/includes/docs-helpbox.html"}}
 			</article>
+
 		</div>
 		{{.Include "/includes/footer.html"}}
 	</body>
